@@ -11,3 +11,93 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 5rem 1rem;
+  margin: 0 auto;
+  width: 600px;
+  background-color: #e2e0e0;
+}
+
+ul {
+  text-decoration: none;
+  padding: 0;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.row-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+}
+
+.mainBox {
+  position: relative;
+  max-width: 400px;
+  margin-top: 30px;
+  margin-left: auto;
+}
+
+.mainBox::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid #feffff;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  top: -20px;
+}
+
+.mainBox.first-box::before {
+  right: 110px;
+}
+
+.mainBox.choose-block::before {
+  right: 25px;
+}
+
+.square {
+  width: 30px;
+  height: 30px;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #98999a;
+}
+
+.mainBox.choose-block .line {
+  padding: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(231, 232, 232);
+}
+
+.mainBox.choose-block .line:hover,
+.mainBox.choose-block .line:focus,
+.active {
+  color: #cccdd3;
+  background-color: #3477b6;
+}
+
+.mainBox.choose-block .line:last-child {
+  border-bottom: none;
+}

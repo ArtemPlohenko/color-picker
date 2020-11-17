@@ -1,0 +1,24 @@
+/* // Buttons */
+.btn {
+  border: 1px solid #a9abac;
+  padding: 5px 10px;
+}
+
+.btn-cancel {
+  color: #98999a;
+  background-color: #d1d3d4;
+}
+
+.btn-cancel:hover {
+  background-color: rgba(209, 211, 212, 0.8);
+}
+
+.btn-ok {
+  color: #fff;
+  background-color: #6ba55a;
+  margin-left: 10px;
+}
+
+.btn-ok:hover {
+  background-color: rgba(107, 165, 90, 0.8);
+}

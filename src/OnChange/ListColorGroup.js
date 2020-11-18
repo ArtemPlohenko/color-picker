@@ -27,7 +27,7 @@ const styles = {
   }
 }
 
-export default function ListColorGroup() {
+function ListColorGroup() {
   return (
     <div className="mainBox first-box" style={styles.mainBox}>
       <ul style={styles.ul}>
@@ -51,3 +51,5 @@ export default function ListColorGroup() {
     </div>
   )
 }
+
+export default ListColorGroup;

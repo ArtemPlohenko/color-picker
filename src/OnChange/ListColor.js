@@ -17,10 +17,12 @@ const styles = {
   }
 };
 
-export default function ListColor() {
+function ListColor() {
   return (
     <button className="row-block" style={styles.holder}>
       <div className="square" style={styles.square}></div>
     </button>
   )
 }
+
+export default ListColor;

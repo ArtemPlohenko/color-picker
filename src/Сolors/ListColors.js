@@ -19,13 +19,15 @@ const styles = {
     borderLeft: '18px solid transparent',
     borderRight: '18px solid transparent',
     transform: 'rotate(180deg)'
-}
+  }
 };
 
-export default function ListColors() {
+function ListColors() {
   return (
     <button className="row-block" style={styles.holder}>
       <div className="triangle" style={styles.triangle}></div>
     </button>
   )
 }
+
+export default ListColors;

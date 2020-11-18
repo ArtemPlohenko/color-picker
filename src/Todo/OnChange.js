@@ -8,7 +8,7 @@ const styles = {
   }
 };
 
-export default function OnChange() {
+function OnChange() {
   return (
     <div style={styles.groupColors}>
       <ListColor></ListColor>
@@ -16,3 +16,5 @@ export default function OnChange() {
     </div>
   )
 }
+
+export default OnChange;

@@ -9,7 +9,7 @@ const styles = {
   }
 }
 
-export default function ChoseColor() {
+function ChoseColor() {
   return (
     <div className="mainBox choose-block" style={styles.mainBox}>
       <ul>
@@ -33,3 +33,5 @@ export default function ChoseColor() {
     </div>
   )
 }
+
+export default ChoseColor;

@@ -26,6 +26,7 @@ code {
 ul {
   text-decoration: none;
   padding: 0;
+  margin: 0;
 }
 
 .title {
@@ -44,9 +45,10 @@ button {
 }
 
 .mainBox {
-  position: relative;
-  max-width: 400px;
-  margin-top: 30px;
+  /* position: relative; */
+  position: absolute;
+  width: 400px;
+  margin-top: 105px;
   margin-left: auto;
 }
 

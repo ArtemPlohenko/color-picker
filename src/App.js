@@ -1,17 +1,10 @@
 import React from 'react';
-import ListColorGroup from './OnChange/ListColorGroup';
-import ChoseColor from '../src/Сolors/ChoseColor';
-import HolderBlock from '../src/Todo/HolderBlock';
+import ColorPicker from './Todo/ColorPicker';
 
 function App() {
   return (
     <div className="wrapper">
-      <div className="title">
-        <h1>ColorPicker</h1>
-      </div>
-      <HolderBlock></HolderBlock>
-      <ListColorGroup />
-      <ChoseColor />
+      <ColorPicker />
     </div>
 
   );

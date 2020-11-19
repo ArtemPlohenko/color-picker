@@ -1,6 +1,11 @@
 import React from 'react';
+import ListColors from '../ComponentGroup/ListColors';
 
 const styles = {
+  groupColors: {
+    display: 'flex',
+    justifyContent: 'flex-end'
+  },
   holder: {
     width: '84px',
     height: '70px',
@@ -22,12 +27,18 @@ const styles = {
   }
 };
 
-function ListColors() {
+function ListColorPicker(props) {
+
   return (
-    <button className="row-block" style={styles.holder}>
-      <div className="triangle" style={styles.triangle}></div>
-    </button>
+    <div style={styles.groupColors}>
+      <button onClick={props.onChange} className="row-block" style={styles.holder}>
+        <div className="triangle" style={styles.triangle}></div>
+      </button>
+
+      {props.drope ? <ListColors /> : null}
+
+    </div>
   )
 }
 
-export default ListColors;
+export default ListColorPicker;

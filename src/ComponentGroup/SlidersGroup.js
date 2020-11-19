@@ -27,7 +27,7 @@ const styles = {
   }
 }
 
-function ListColorGroup() {
+function SlidersGroup() {
   return (
     <div className="mainBox first-box" style={styles.mainBox}>
       <ul style={styles.ul}>
@@ -52,4 +52,4 @@ function ListColorGroup() {
   )
 }
 
-export default ListColorGroup;
+export default SlidersGroup;

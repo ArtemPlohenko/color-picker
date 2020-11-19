@@ -17,7 +17,7 @@ const styles = {
     borderLeft: '1px solid #bebfc0',
     backgroundColor: '#feffff'
   },
-  square: {
+  active: {
     backgroundColor: '#e8b541'
   }
 };
@@ -25,10 +25,10 @@ const styles = {
 function SliderColorPicker(props) {
   return (
     <div style={styles.groupColors}>
-      <button onClick={props.onChange} className="row-block" style={styles.holder} >
-        <div className="square" style={styles.square}></div>
+      <button onClick={props.onChange} curentColor={props.curentColor} className="row-block" style={styles.holder} >
+        <div className="square active" style={{backgroundColor: props.curentColor}}></div>
       </button>
-      {props.drope ? <SlidersGroup /> : null}
+      {props.drope ? <SlidersGroup selectColor={props.selectColor} /> : null}
     </div>
   )
 }

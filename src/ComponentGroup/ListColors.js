@@ -7,27 +7,34 @@ const styles = {
     backgroundColor: '#feffff',
     textAlign: 'end'
   }
-}
+};
 
-function ListColors() {
+const colors = {
+  red: '#df222e',
+  yellow: '#e8b541',
+  lightGreen: '#18a35a',
+  lightBlue: '#1dafe9'
+};
+
+function ListColors(props) {
   return (
     <div className="mainBox choose-block" style={styles.mainBox}>
       <ul>
-        <li className="line" style={styles.line}>
+        <li onClick={() => {props.setColor(colors.red)}} className="line" style={styles.line}>
           red
-          <div className="square bg-red"></div>
+          <div className="square" style={{backgroundColor: colors.red}}></div>
         </li>
-        <li className="line active" style={styles.line}>
+        <li onClick={() => {props.setColor(colors.yellow)}} className="line activeHover" style={styles.line}>
           yellow
-          <div className="square bg-yellow"></div>
+          <div className="square" style={{backgroundColor: colors.yellow}}></div>
         </li>
-        <li className="line" style={styles.line}>
+        <li onClick={() => {props.setColor(colors.lightGreen)}} className="line" style={styles.line}>
           green
-          <div className="square bg-light-green"></div>
+          <div className="square" style={{backgroundColor: colors.lightGreen}}></div>
         </li>
-        <li className="line" style={styles.line}>
+        <li onClick={() => {props.setColor(colors.lightBlue)}} className="line" style={styles.line}>
           blue
-          <div className="square bg-light-blue"></div>
+          <div className="square" style={{backgroundColor: colors.lightBlue}}></div>
         </li>
       </ul>
     </div>

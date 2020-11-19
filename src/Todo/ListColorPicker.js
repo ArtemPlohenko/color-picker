@@ -33,7 +33,7 @@ function ListColorPicker(props) {
       <button onClick={props.onChange} className="row-block" style={styles.holder}>
         <div className="triangle" style={styles.triangle}></div>
       </button>
-      {props.drope ? <ListColors /> : null}
+      {props.drope ? <ListColors {...props} /> : null}
     </div>
   )
 }

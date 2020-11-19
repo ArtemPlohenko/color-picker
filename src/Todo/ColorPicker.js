@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import ListColorPicker from './ListColorPicker';
 import SliderColorPicker from './SliderColorPicker';
 
@@ -19,26 +18,40 @@ const styles = {
 };
 
 function ColorPicker() {
-
-  const [activeColor, setactiveColor] = useState(false);
+  const [activeColor, setActiveColor] = useState(false),
+        [activeColorRGB, setActiveColorRGB] = useState(false),
+        [curentColor, setCurentColor] = useState(false);
 
   const openColorList = () => {
-    setactiveColor(!activeColor);
+    setActiveColor(!activeColor);
+    setActiveColorRGB(false);
   }
 
-  const [activeColor2, setactiveColor2] = useState(false);
+  const openColorRGB = () => {
+    setActiveColorRGB(!activeColorRGB);
+    setActiveColor(false);
+  }
 
-  const openColorList2 = () => {
-    setactiveColor2(!activeColor2);
+  const setColor = (color) => {
+    setCurentColor(color);
+    setActiveColor(false);
+    setActiveColorRGB(false);
   }
 
   return (
     <>
       <div style={styles.lineHolder}>
-        <div className="col" style={styles.text}>#FFCC33</div>
+        <div className="col"  style={styles.text}>#FFCC33</div>
         <div className="row-block" style={styles.holder}>
-          <SliderColorPicker drope={activeColor2} onChange={openColorList2} />
-          <ListColorPicker drope={activeColor} onChange={openColorList} />
+          <SliderColorPicker
+            curentColor={curentColor}
+            drope={activeColorRGB}
+            onChange={openColorRGB} />
+          <ListColorPicker
+            setColor={setColor}
+            curentColor={curentColor}
+            drope={activeColor}
+            onChange={openColorList} />
         </div>
       </div>
     </>

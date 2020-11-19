@@ -23,15 +23,12 @@ const styles = {
 };
 
 function SliderColorPicker(props) {
-
   return (
     <div style={styles.groupColors}>
       <button onClick={props.onChange} className="row-block" style={styles.holder} >
         <div className="square" style={styles.square}></div>
       </button>
-
       {props.drope ? <SlidersGroup /> : null}
-
     </div>
   )
 }

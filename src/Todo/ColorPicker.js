@@ -18,7 +18,7 @@ const styles = {
   }
 };
 
-export default function ColorPicker() {
+function ColorPicker() {
 
   const [activeColor, setactiveColor] = useState(false);
 
@@ -26,15 +26,23 @@ export default function ColorPicker() {
     setactiveColor(!activeColor);
   }
 
+  const [activeColor2, setactiveColor2] = useState(false);
+
+  const openColorList2 = () => {
+    setactiveColor2(!activeColor2);
+  }
+
   return (
     <>
       <div style={styles.lineHolder}>
         <div className="col" style={styles.text}>#FFCC33</div>
         <div className="row-block" style={styles.holder}>
+          <SliderColorPicker drope={activeColor2} onChange={openColorList2} />
           <ListColorPicker drope={activeColor} onChange={openColorList} />
-          <SliderColorPicker drope={activeColor} onChange={openColorList} />
         </div>
       </div>
     </>
   )
 }
+
+export default ColorPicker;

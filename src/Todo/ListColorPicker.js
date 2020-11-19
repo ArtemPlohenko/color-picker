@@ -28,15 +28,12 @@ const styles = {
 };
 
 function ListColorPicker(props) {
-
   return (
     <div style={styles.groupColors}>
       <button onClick={props.onChange} className="row-block" style={styles.holder}>
         <div className="triangle" style={styles.triangle}></div>
       </button>
-
       {props.drope ? <ListColors /> : null}
-
     </div>
   )
 }
